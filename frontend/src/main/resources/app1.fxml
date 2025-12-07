@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.controller.AppController"
+            prefHeight="600" prefWidth="970">
+
+    <children>
+
+        <VBox fx:id="sidebar"
+              prefWidth="180" prefHeight="600"
+              style="-fx-background-color: #212121; -fx-border-color: #0598ff; -fx-border-width: 0px 3px 0px 0px;">
+            <children>
+                <Button text="Home" onAction="#openHome"
+                        style="-fx-background-color: #0598ff; -fx-text-fill: white; -fx-font-weight: bold;"
+                        prefWidth="180"/>
+
+                <Button text="Skupiny" onAction="#openGroups"
+                        style="-fx-background-color: #0598ff; -fx-text-fill: white; -fx-font-weight: bold;"
+                        prefWidth="180"/>
+                <Button text="Úlohy" onAction="#openTasks"
+                        style="-fx-background-color: #0598ff; -fx-text-fill: white; -fx-font-weight: bold;"
+                        prefWidth="180"/>
+                <Button text="Materiály" onAction="#openResources"
+                        style="-fx-background-color: #0598ff; -fx-text-fill: white; -fx-font-weight: bold;"
+                        prefWidth="180"/>
+                <Button text="Používateľ" onAction="#openUser"
+                        style="-fx-background-color: #0598ff; -fx-text-fill: white; -fx-font-weight: bold;"
+                        prefWidth="180"/>
+                <Button text="Štatistiky" onAction="#openStats"
+                        style="-fx-background-color: #0598ff; -fx-text-fill: white; -fx-font-weight: bold;"
+                        prefWidth="180"/>
+
+
+
+
+                <Pane VBox.vgrow="ALWAYS" />
+
+
+                <Button fx:id="notificationsButton"
+                        text="Notifikácie"
+                        onAction="#openNotifications"
+                        style="-fx-background-color: #0598ff; -fx-text-fill: white; -fx-font-weight: bold;"
+                        prefWidth="180"/>
+
+                <Button text="Log out" onAction="#handleLogout"
+                        style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;"
+                        prefWidth="180"/>
+            </children>
+        </VBox>
+
+
+        <AnchorPane fx:id="contentPane"
+                    layoutX="180" prefWidth="620" prefHeight="600"
+                    style="-fx-background-color: #2b2b2b;">
+            <children>
+
+                <Label fx:id="welcomeLabel"
+                       layoutX="400" layoutY="10"
+                       prefWidth="200" prefHeight="25"
+                       text="Aktuálny používateľ"
+                       style="-fx-text-fill: #0598ff; -fx-font-weight: bold; -fx-font-size: 14px;" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

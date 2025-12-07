@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.controller.HomeController"
+            prefHeight="600.0" prefWidth="800.0"
+            style="-fx-background-color: #212121;">
+
+    <children>
+
+        <Label text="Dashboard &amp; Chat"
+               layoutX="280" layoutY="20"
+               style="-fx-text-fill: #0598ff; -fx-font-size: 24px; -fx-font-weight: bold;" />
+
+
+        <HBox layoutX="40" layoutY="80" spacing="25">
+            <children>
+
+                <AnchorPane prefWidth="150" prefHeight="90"
+                            style="-fx-background-color: #2b2b2b; -fx-border-color: #0598ff; -fx-border-width: 2px;">
+                    <children>
+                        <Label text="Skupiny" layoutX="45" layoutY="15"
+                               style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                        <Label fx:id="groupsCount" text="0" layoutX="60" layoutY="45"
+                               style="-fx-text-fill: #0598ff; -fx-font-size: 18px;" />
+                    </children>
+                </AnchorPane>
+
+
+                <AnchorPane prefWidth="150" prefHeight="90"
+                            style="-fx-background-color: #2b2b2b; -fx-border-color: #0598ff; -fx-border-width: 2px;">
+                    <children>
+                        <Label text="Úlohy" layoutX="50" layoutY="15"
+                               style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                        <Label fx:id="tasksCount" text="0" layoutX="60" layoutY="45"
+                               style="-fx-text-fill: #0598ff; -fx-font-size: 18px;" />
+                    </children>
+                </AnchorPane>
+
+
+                <AnchorPane prefWidth="150" prefHeight="90"
+                            style="-fx-background-color: #2b2b2b; -fx-border-color: #0598ff; -fx-border-width: 2px;">
+                    <children>
+                        <Label text="Rozpracované" layoutX="25" layoutY="15"
+                               style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                        <Label fx:id="inProgressCount" text="0" layoutX="60" layoutY="45"
+                               style="-fx-text-fill: #0598ff; -fx-font-size: 18px;" />
+                    </children>
+                </AnchorPane>
+
+
+                <AnchorPane prefWidth="150" prefHeight="90"
+                            style="-fx-background-color: #2b2b2b; -fx-border-color: #0598ff; -fx-border-width: 2px;">
+                    <children>
+                        <Label text="Hotové" layoutX="50" layoutY="15"
+                               style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                        <Label fx:id="doneCount" text="0" layoutX="60" layoutY="45"
+                               style="-fx-text-fill: #0598ff; -fx-font-size: 18px;" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+
+
+        <VBox layoutX="50" layoutY="200" spacing="10">
+            <children>
+                <ListView fx:id="chatList" prefHeight="320" prefWidth="700"
+                          style="-fx-background-color: #2b2b2b; -fx-text-fill: white;" />
+                <HBox spacing="10">
+                    <TextField fx:id="chatInput" promptText="Napíš správu..."
+                               prefWidth="600"
+                               style="-fx-background-color: #2b2b2b; -fx-text-fill: white;" />
+                    <Button text="Send" onAction="#handleSend"
+                            style="-fx-background-color: #0598ff; -fx-text-fill: white; -fx-font-weight: bold;" />
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

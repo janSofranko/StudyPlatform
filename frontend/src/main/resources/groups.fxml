@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.controller.GroupsController"
+            prefHeight="600" prefWidth="800">
+
+    <children>
+
+        <ListView fx:id="groupsList"
+                  layoutX="20" layoutY="20"
+                  prefWidth="300" prefHeight="500"/>
+
+
+        <Button text="Create Group"
+                layoutX="20" layoutY="530"
+                onAction="#openCreateGroupDialog"/>
+
+
+        <VBox layoutX="350" layoutY="20" spacing="10">
+            <children>
+                <Label fx:id="groupNameLabel" text="Názov skupiny"
+                       style="-fx-text-fill: #0598ff; -fx-font-weight: bold;"/>
+                <Label fx:id="groupDescLabel" text="Popis skupiny"
+                       style="-fx-text-fill: white;"/>
+
+                <Label text="Členovia:"
+                       style="-fx-text-fill: #0598ff; -fx-font-weight: bold;"/>
+                <ListView fx:id="membersList"
+                          prefHeight="300" prefWidth="400"/>
+
+                <HBox spacing="10">
+                    <Button text="Add Member" onAction="#handleAddMember"/>
+                    <Button text="Remove Member" onAction="#handleRemoveMember"/>
+                    <Button text="Delete Group" onAction="#handleDeleteGroup"
+                            style="-fx-background-color: red; -fx-text-fill: white;"/>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

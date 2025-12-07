@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.controller.CreateGroupController"
+            prefHeight="250" prefWidth="400"
+            style="-fx-background-color: #212121;">
+
+    <children>
+        <VBox spacing="10" alignment="CENTER" prefWidth="400" prefHeight="250">
+            <children>
+                <Label text="Create Group"
+                       style="-fx-text-fill: white; -fx-font-size: 18px;"/>
+                <TextField fx:id="nameField" promptText="Group Name"
+                           styleClass="input-dark"/>
+                <TextArea fx:id="descField" promptText="Description"
+                          styleClass="input-dark"/>
+                <HBox spacing="10">
+                    <Button text="Create" onAction="#handleCreate"/>
+                    <Button text="Cancel" onAction="#handleCancel"/>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+.input-dark {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #aaaaaa;
+    -fx-border-color: #444444;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.button {
+    -fx-background-color: #444444;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+}
+
+.button:hover {
+    -fx-background-color: #666666;
+}
+.chart-pie-label {
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+.default-color0.chart-pie { -fx-pie-color: #0598ff; }   /* otvorené */
+.default-color1.chart-pie { -fx-pie-color: orange; }    /* rozpracované */
+.default-color2.chart-pie { -fx-pie-color: green; }     /* dokončené */
+.default-color3.chart-pie { -fx-pie-color: cyan; }      /* žiadne dáta */
+
+.chart-pie-label {
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+.combo-box {
+    -fx-background-color: white;   /* celé pole bude biele */
+}
+
+.combo-box .text-field {
+    -fx-text-fill: black;          /* text vo vnútri bude čierny */
+    -fx-prompt-text-fill: gray;    /* promptText (Vyber skupinu) bude sivý */
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: black;          /* položky v rozbaľovacom zozname budú čierne */
+    -fx-background-color: white;   /* pozadie položiek */
+}

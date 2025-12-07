@@ -1,0 +1,49 @@
+### Create user
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "Jan",
+  "password": "123456"
+}
+
+
+### Create group
+POST http://localhost:8080/api/groups
+Content-Type: application/json
+
+{
+  "name": "nova skupinasdsss",
+  "description": "Skupina pre test",
+  "creatorId": 1
+}
+
+### Get all users
+GET http://localhost:8080/api/users
+
+### Get all groups
+GET http://localhost:8080/api/groups
+
+### User join group
+POST http://localhost:8080/api/memberships/join?userId=1&groupId=1&role=member
+
+### Get members of group
+GET http://localhost:8080/api/memberships/group/1
+
+### Delete membership
+DELETE http://localhost:8080/api/memberships/1
+
+
+### Create task
+POST http://localhost:8080/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Pripraviť ER diagram",
+  "description": "Obrázok vložiť do dokumentácie",
+  "status": "OPEN",
+  "groupId": 1,
+  "createdBy": 1
+}
+
+

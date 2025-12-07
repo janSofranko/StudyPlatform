@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="553.0" prefWidth="760.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.controller.RegistrationController">
+
+    <children>
+
+
+        <ImageView fitHeight="553.0" fitWidth="768.0" layoutX="-4.0">
+            <image>
+                <Image url="@images/NEONMONKI.jpg" />
+            </image>
+        </ImageView>
+
+
+        <AnchorPane layoutX="170.0" layoutY="60.0"
+                    prefHeight="430.0" prefWidth="421.0"
+                    style="-fx-background-color: #212121; -fx-border-color: #212121;">
+
+            <children>
+
+
+                <Label layoutX="85.0" layoutY="20.0"
+                       prefWidth="250.0"
+                       text="Registration"
+                       alignment="CENTER"
+                       textFill="#0088ff">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                </Label>
+
+
+                <TextField fx:id="Username1"
+                           layoutX="88.0" layoutY="90.0"
+                           prefHeight="25.0" prefWidth="246.0"
+                           promptText="Username"
+                           style="-fx-background-color: transparent;
+                                  -fx-border-color: #0598ff;
+                                  -fx-border-width: 0 0 2px 0;
+                                  -fx-text-fill: white;" />
+
+
+                <TextField fx:id="EmailField"
+                           layoutX="88.0" layoutY="140.0"
+                           prefHeight="25.0" prefWidth="246.0"
+                           promptText="Email"
+                           style="-fx-background-color: transparent;
+                                  -fx-border-color: #0598ff;
+                                  -fx-border-width: 0 0 2px 0;
+                                  -fx-text-fill: white;" />
+
+
+                <PasswordField fx:id="Password1"
+                               layoutX="88.0" layoutY="190.0"
+                               prefHeight="25.0" prefWidth="246.0"
+                               promptText="Password"
+                               style="-fx-background-color: transparent;
+                                      -fx-border-color: #0598ff;
+                                      -fx-border-width: 0 0 2px 0;
+                                      -fx-text-fill: white;" />
+
+
+                <PasswordField fx:id="Password"
+                               layoutX="88.0" layoutY="240.0"
+                               prefHeight="25.0" prefWidth="246.0"
+                               promptText="Confirm Password"
+                               style="-fx-background-color: transparent;
+                                      -fx-border-color: #0598ff;
+                                      -fx-border-width: 0 0 2px 0;
+                                      -fx-text-fill: white;" />
+
+
+                <Label fx:id="invalidRegistration"
+                       layoutX="88.0" layoutY="275.0"
+                       prefWidth="246.0"
+                       alignment="CENTER"
+                       textFill="RED"
+                       visible="false" />
+
+
+                <Button layoutX="167.0" layoutY="310.0"
+                        prefHeight="40.0" prefWidth="87.0"
+                        text="Register"
+                        style="-fx-background-color: #0598ff; -fx-text-fill: white; -fx-font-weight: bold;"
+                        onAction="#handleRegister" />
+
+
+                <Label layoutX="110.0" layoutY="370.0"
+                       prefWidth="146.0"
+                       text="Already have an account ?"
+                       alignment="CENTER"
+                       textFill="#fafafa" />
+
+
+                <Hyperlink layoutX="248.0" layoutY="367.0"
+                           text="Back to Login"
+                           onAction="#goToLogin"
+                           textFill="#0598ff" />
+
+            </children>
+
+            <effect>
+                <DropShadow />
+            </effect>
+
+        </AnchorPane>
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.controller.TasksController"
+            prefHeight="400.0" prefWidth="800.0">
+
+    <children>
+        <!-- Horný panel s tlačidlami -->
+        <HBox layoutX="20" layoutY="10" spacing="10">
+            <children>
+                <Button text="Pridať úlohu" onAction="#handleAddTask"/>
+                <Button text="Priradiť používateľa" onAction="#handleAssignUser"/>
+                <Button text="Odobrať používateľa" onAction="#handleUnassignUser"/>
+                <Button text="Označiť ako hotové" onAction="#handleMarkDone"/>
+
+            </children>
+        </HBox>
+
+        <!-- Zoznam skupín -->
+        <ListView fx:id="groupsList"
+                  layoutX="20" layoutY="50"
+                  prefHeight="300" prefWidth="200"/>
+
+        <!-- Tabuľka úloh -->
+        <TableView fx:id="tasksTable" layoutX="240" layoutY="50" prefHeight="300" prefWidth="300">
+            <columns>
+                <TableColumn fx:id="colName" text="Názov" prefWidth="200"/>
+                <TableColumn fx:id="colStatus" text="Stav" prefWidth="100"/>
+            </columns>
+        </TableView>
+
+
+
+
+
+
+        <!-- Panel priradených používateľov -->
+        <VBox layoutX="560" layoutY="20" spacing="10">
+            <children>
+                <!-- Nadpis na bielo -->
+                <Label text="Užívatelia" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14;"/>
+                <ListView fx:id="assigneesList" prefWidth="220" prefHeight="300"/>
+            </children>
+        </VBox>
+
+
+
+    </children>
+</AnchorPane>

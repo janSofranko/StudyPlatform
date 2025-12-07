@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.controller.ResourcesController"
+            prefHeight="400.0" prefWidth="800.0"
+            style="-fx-background-color: #212121;">
+
+    <children>
+        <ListView fx:id="groupsList"
+                  layoutX="20" layoutY="20"
+                  prefHeight="360" prefWidth="220"/>
+
+        <TableView fx:id="tasksTable"
+                   layoutX="260" layoutY="20"
+                   prefHeight="360" prefWidth="260">
+            <columns>
+                <TableColumn fx:id="colTaskTitle" text="Názov" prefWidth="160"/>
+                <TableColumn fx:id="colTaskStatus" text="Stav" prefWidth="90"/>
+            </columns>
+        </TableView>
+
+        <TableView fx:id="resourcesTable"
+                   layoutX="540" layoutY="20"
+                   prefHeight="300" prefWidth="240">
+            <columns>
+                <TableColumn fx:id="colResTitle" text="Názov" prefWidth="100"/>
+                <TableColumn fx:id="colResUploader" text="Pridal" prefWidth="70"/>
+                <TableColumn fx:id="colResLink" text="Link" prefWidth="70"/>
+            </columns>
+        </TableView>
+
+
+        <HBox spacing="10" layoutX="540" layoutY="330" prefWidth="240" alignment="CENTER_RIGHT">
+            <Button fx:id="addResourceButton" text="Pridať materiál" onAction="#handleAddResource"
+                    style="-fx-background-color: #0598ff; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+            <Button fx:id="deleteResourceButton" text="Vymazať materiál" onAction="#handleDeleteResource"
+                    style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </HBox>
+    </children>
+</AnchorPane>
