@@ -1,4 +1,4 @@
-package com.example.notify;
+package com.example.controller;
 
 import com.example.api.ApiClient;
 import com.example.notify.NotificationStore;
